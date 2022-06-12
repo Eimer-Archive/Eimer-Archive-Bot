@@ -18,8 +18,6 @@ import java.nio.file.Path;
 
 public class Main {
 
-    private static final String token = "OTg1MDUwNjg0MzgwNTY1NTY0.GC6n5C.cDTJz652Rv-iio2rNVEOL3Xdcmzg65L2iT2j0k";
-
     public static final String[] prefix = new String[]{"!", "A!"};
 
     public static CommandManager commandManager = new CommandManager();
