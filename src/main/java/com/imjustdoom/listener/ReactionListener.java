@@ -17,7 +17,11 @@ public class ReactionListener extends ListenerAdapter {
         if(!event.getMessageId().equals("985447032544170034")) return;
 
         if(event.getReaction().getReactionEmote().getName().equals("📌")) {
-            guild.removeRoleFromMember(UserSnowflake.fromId(event.getUserId()), guild.getRoleById("985415668050583573")).queue();
+            guild.removeRoleFromMember(event.getUserId(), guild.getRoleById("985415668050583573")).queue();
+        }
+
+        if(event.getReaction().getReactionEmote().getName().equals("🔔")) {
+            guild.addRoleToMember(event.getUserId(), guild.getRoleById("995245085098786876")).queue();
         }
     }
 
@@ -27,7 +31,11 @@ public class ReactionListener extends ListenerAdapter {
         if(!event.getMessageId().equals("985447032544170034")) return;
 
         if(event.getReaction().getReactionEmote().getName().equals("📌")) {
-            guild.addRoleToMember(UserSnowflake.fromId(event.getUserId()), guild.getRoleById("985415668050583573")).queue();
+            guild.addRoleToMember(event.getUserId(), guild.getRoleById("985415668050583573")).queue();
+        }
+
+        if(event.getReaction().getReactionEmote().getName().equals("🔔")) {
+            guild.removeRoleFromMember(event.getUserId(), guild.getRoleById("995245085098786876")).queue();
         }
     }
 }

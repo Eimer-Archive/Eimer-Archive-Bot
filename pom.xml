@@ -15,6 +15,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>net.badbird5907</groupId>
+            <artifactId>JDACommand</artifactId>
+            <version>4.0.0-REL</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.DV8FromTheWorld</groupId>
             <artifactId>JDA</artifactId>
             <version>v5.0.0-alpha.12</version>

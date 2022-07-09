@@ -31,29 +31,29 @@ public class CommandManager extends ListenerAdapter {
         String[] args = event.getMessage().getContentRaw().split(" ");
         User user = event.getAuthor();
 
-        if(args[0].equalsIgnoreCase("<@985050684380565564>")) {
+        if (args[0].equalsIgnoreCase("<@985050684380565564>")) {
             new HelpCmd().execute(user, args, event.getMessage(), event.getTextChannel());
             return;
         }
 
         String strCommand = "";
-        for(String prefix : Main.prefix) {
+        for (String prefix : Main.prefix) {
             if (!args[0].toLowerCase().startsWith(prefix.toLowerCase())) continue;
             strCommand = args[0].substring(prefix.length());
         }
 
         COMMAND:
         for (Command command : commands) {
-            for(String name : command.getName()) {
+            for (String name : command.getName()) {
                 if (name.equalsIgnoreCase(strCommand)) {
-                    if(command.getRoles().length > 0) for(String role : command.getRoles()) {
-                        if(!event.getMember().getRoles().contains(event.getGuild().getRoleById(role))) {
+                    if (command.getRoles().length > 0) for (String role : command.getRoles()) {
+                        if (!event.getMember().getRoles().contains(event.getGuild().getRoleById(role))) {
                             event.getMessage().reply("You don't have permission to use this command.").queue();
                             continue COMMAND;
                         }
                     }
-                    if(command.getUsers().length > 0) for(String user1 : command.getUsers()) {
-                        if(!event.getAuthor().getId().equals(user1)) {
+                    if (command.getUsers().length > 0) for (String user1 : command.getUsers()) {
+                        if (!event.getAuthor().getId().equals(user1)) {
                             event.getMessage().reply("You don't have permission to use this command.").queue();
                             continue COMMAND;
                         }

@@ -11,6 +11,6 @@ public class JoinListener extends ListenerAdapter {
         User user = event.getUser();
         Guild guild = event.getGuild();
 
-        guild.addRoleToMember(user, guild.getRoleById("985415668050583573")).queue();
+        guild.addRoleToMember(user.getId(), guild.getRoleById("985415668050583573")).queue();
     }
 }
