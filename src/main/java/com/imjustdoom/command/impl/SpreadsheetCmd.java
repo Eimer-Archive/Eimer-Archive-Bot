@@ -12,7 +12,7 @@ public class SpreadsheetCmd implements Command {
 
     @Override
     public String[] getName() {
-        return new String[]{"spreadsheet", "ss", "s", "sp", "spreadsheetlink"};
+        return new String[]{"spreadsheet", "sps", "spread", "sheet", "ss", "s", "sp", "spreadsheetlink"};
     }
 
     @Override
