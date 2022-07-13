@@ -35,7 +35,7 @@ public class InfoCmd implements Command {
         message.replyEmbeds(new EmbedBuilder()
                 .setTitle("Statistics")
                 .addField("Total builds", "517", false)
-                .addField("CraftBukkit Builds", "514", false)
+                .addField("CraftBukkit Builds", "515", false)
                 .addField("Spigot/CraftBukkit-- Builds", "1", false)
                 .addField("DytanicSpigot Builds", "1", false)
                 .addField("GSpigot Builds", "1", false)
